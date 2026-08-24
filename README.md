@@ -1,3 +1,9 @@
+# `anyhow-fn-context`
+
+[![crates.io](https://img.shields.io/crates/v/anyhow-fn-context)](https://crates.io/crates/anyhow-fn-context)
+[![docs](https://docs.rs/anyhow-fn-context/badge.svg)](https://docs.rs/anyhow-fn-context)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tipsypastels/anyhow-fn-context/blob/main/LICENSE)
+
 Wraps a function or method in `anyhow`'s `with_context`, alleviating the need to do it
 in the caller or at every return site.
 
