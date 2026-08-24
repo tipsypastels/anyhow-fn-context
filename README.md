@@ -8,6 +8,8 @@ Wraps a function or method in `anyhow`'s `with_context`, alleviating the need to
 in the caller or at every return site.
 
 ```rust
+use anyhow_fn_context::context;
+
 #[context("failed to say hello")]
 fn say_hello() -> anyhow::Result<()> {
     // ...
@@ -19,6 +21,8 @@ Arguments passed to the function can be used as format arguments, as can arbitra
 additional arguments to the attribute.
 
 ```rust
+use anyhow_fn_context::context;
+
 #[context("failed to frobnify {foo:?} with {}", SOME_CONSTANT)]
 fn frobnify<T: Debug>(foo: T) -> anyhow::Result<()> {
     // ...
@@ -30,6 +34,8 @@ If anyhow is not located at `::anyhow` but re-exported somewhere else, use the
 special `anyhow` keyword argument to specify where.
 
 ```rust
+use anyhow_fn_context::context;
+
 #[context("failed to say goodbye", anyhow = othercrate::anyhow)]
 fn say_goodbye() -> othercrate::anyhow::Result<()> {
     // ...

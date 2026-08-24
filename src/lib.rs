@@ -2,7 +2,8 @@
 /// in the caller or at every return site.
 ///
 /// ```rust
-/// # use anyhow_fn_context::context;
+/// use anyhow_fn_context::context;
+///
 /// #[context("failed to say hello")]
 /// fn say_hello() -> anyhow::Result<()> {
 ///     // ...
@@ -14,9 +15,10 @@
 /// additional arguments to the attribute.
 ///
 /// ```rust
-/// # use anyhow_fn_context::context;
 /// # use std::fmt::Debug;
 /// # const SOME_CONSTANT: u8 = 1;
+/// use anyhow_fn_context::context;
+///
 /// #[context("failed to frobnify {foo:?} with {}", SOME_CONSTANT)]
 /// fn frobnify<T: Debug>(foo: T) -> anyhow::Result<()> {
 ///     // ...
@@ -29,7 +31,8 @@
 ///
 /// ```rust
 /// # mod othercrate { pub use anyhow; }
-/// # use anyhow_fn_context::context;
+/// use anyhow_fn_context::context;
+///
 /// #[context("failed to say goodbye", anyhow = othercrate::anyhow)]
 /// fn say_goodbye() -> othercrate::anyhow::Result<()> {
 ///     // ...
