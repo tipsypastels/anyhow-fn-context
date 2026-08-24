@@ -1,0 +1,13 @@
+[package]
+name = "anyhow-fn-context"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members = [".", "./macro"]
+
+[dependencies]
+anyhow-fn-context-macro = { version = "0.1.0", path = "./macro" }
+
+[dev-dependencies]
+anyhow = "1"
