@@ -2,6 +2,9 @@
 name = "anyhow-fn-context"
 version = "0.1.0"
 edition = "2024"
+description = "Set anyhow context with an attribute."
+repository = "https://github.com/tipsypastels/anyhow-fn-context"
+license = "MIT"
 
 [workspace]
 members = [".", "./macro"]

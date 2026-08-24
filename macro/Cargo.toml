@@ -2,6 +2,9 @@
 name = "anyhow-fn-context-macro"
 version = "0.1.0"
 edition = "2024"
+description = "Helper for anyhow-fn-context crate."
+repository = "https://github.com/tipsypastels/anyhow-fn-context"
+license = "MIT"
 
 [lib]
 proc-macro = true
