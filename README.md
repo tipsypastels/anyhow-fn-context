@@ -13,7 +13,6 @@ use anyhow_fn_context::context;
 #[context("failed to say hello")]
 fn say_hello() -> anyhow::Result<()> {
     // ...
-    # Ok(())
 }
 ```
 
@@ -26,7 +25,6 @@ use anyhow_fn_context::context;
 #[context("failed to frobnify {foo:?} with {}", SOME_CONSTANT)]
 fn frobnify<T: Debug>(foo: T) -> anyhow::Result<()> {
     // ...
-    # Ok(())
 }
 ```
 
@@ -39,6 +37,5 @@ use anyhow_fn_context::context;
 #[context("failed to say goodbye", anyhow = othercrate::anyhow)]
 fn say_goodbye() -> othercrate::anyhow::Result<()> {
     // ...
-    # Ok(())
 }
 ```
